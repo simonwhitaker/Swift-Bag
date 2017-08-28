@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		F4DD2B5F1F53F59B0032E18E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD2B5E1F53F59B0032E18E /* main.swift */; };
+		F4DD2B6C1F53F5B70032E18E /* BagTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD2B6B1F53F5B70032E18E /* BagTest.swift */; };
+		F4DD2B721F53F5C70032E18E /* Bag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD2B711F53F5C70032E18E /* Bag.swift */; };
+		F4DD2B731F53F9790032E18E /* Bag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD2B711F53F5C70032E18E /* Bag.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +28,21 @@
 /* Begin PBXFileReference section */
 		F4DD2B5B1F53F59B0032E18E /* Bag */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Bag; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4DD2B5E1F53F59B0032E18E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		F4DD2B691F53F5B70032E18E /* BagTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BagTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4DD2B6B1F53F5B70032E18E /* BagTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagTest.swift; sourceTree = "<group>"; };
+		F4DD2B6D1F53F5B70032E18E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4DD2B711F53F5C70032E18E /* Bag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bag.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		F4DD2B581F53F59B0032E18E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4DD2B661F53F5B70032E18E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				F4DD2B5D1F53F59B0032E18E /* Bag */,
+				F4DD2B6A1F53F5B70032E18E /* BagTest */,
 				F4DD2B5C1F53F59B0032E18E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				F4DD2B5B1F53F59B0032E18E /* Bag */,
+				F4DD2B691F53F5B70032E18E /* BagTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,8 +74,18 @@
 			isa = PBXGroup;
 			children = (
 				F4DD2B5E1F53F59B0032E18E /* main.swift */,
+				F4DD2B711F53F5C70032E18E /* Bag.swift */,
 			);
 			path = Bag;
+			sourceTree = "<group>";
+		};
+		F4DD2B6A1F53F5B70032E18E /* BagTest */ = {
+			isa = PBXGroup;
+			children = (
+				F4DD2B6B1F53F5B70032E18E /* BagTest.swift */,
+				F4DD2B6D1F53F5B70032E18E /* Info.plist */,
+			);
+			path = BagTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +108,23 @@
 			productReference = F4DD2B5B1F53F59B0032E18E /* Bag */;
 			productType = "com.apple.product-type.tool";
 		};
+		F4DD2B681F53F5B70032E18E /* BagTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4DD2B6E1F53F5B70032E18E /* Build configuration list for PBXNativeTarget "BagTest" */;
+			buildPhases = (
+				F4DD2B651F53F5B70032E18E /* Sources */,
+				F4DD2B661F53F5B70032E18E /* Frameworks */,
+				F4DD2B671F53F5B70032E18E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BagTest;
+			productName = BagTest;
+			productReference = F4DD2B691F53F5B70032E18E /* BagTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -93,6 +136,11 @@
 				ORGANIZATIONNAME = "Simon Whitaker";
 				TargetAttributes = {
 					F4DD2B5A1F53F59B0032E18E = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = VW9QM42U4U;
+						ProvisioningStyle = Automatic;
+					};
+					F4DD2B681F53F5B70032E18E = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = VW9QM42U4U;
 						ProvisioningStyle = Automatic;
@@ -112,16 +160,37 @@
 			projectRoot = "";
 			targets = (
 				F4DD2B5A1F53F59B0032E18E /* Bag */,
+				F4DD2B681F53F5B70032E18E /* BagTest */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F4DD2B671F53F5B70032E18E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F4DD2B571F53F59B0032E18E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4DD2B721F53F5C70032E18E /* Bag.swift in Sources */,
 				F4DD2B5F1F53F59B0032E18E /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4DD2B651F53F5B70032E18E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4DD2B731F53F9790032E18E /* Bag.swift in Sources */,
+				F4DD2B6C1F53F5B70032E18E /* BagTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +305,34 @@
 			};
 			name = Release;
 		};
+		F4DD2B6F1F53F5B70032E18E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = VW9QM42U4U;
+				INFOPLIST_FILE = BagTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.netcetera.BagTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F4DD2B701F53F5B70032E18E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = VW9QM42U4U;
+				INFOPLIST_FILE = BagTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.netcetera.BagTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -253,6 +350,14 @@
 			buildConfigurations = (
 				F4DD2B631F53F59B0032E18E /* Debug */,
 				F4DD2B641F53F59B0032E18E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F4DD2B6E1F53F5B70032E18E /* Build configuration list for PBXNativeTarget "BagTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4DD2B6F1F53F5B70032E18E /* Debug */,
+				F4DD2B701F53F5B70032E18E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
