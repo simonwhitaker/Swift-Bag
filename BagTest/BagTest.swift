@@ -60,26 +60,26 @@ class BagTest: XCTestCase {
   func testEquality() {
     let b = Bag<Character>("aaa")
 
-    let b2 = Bag<Character>("aaa")
+    var b2 = Bag<Character>("aaa")
     XCTAssertEqual(b, b2)
 
-    var b3 = Bag<Character>()
-    XCTAssertNotEqual(b, b3)
+    b2 = Bag<Character>()
+    XCTAssertNotEqual(b, b2)
 
-    b3.add("a") // "a"
-    XCTAssertNotEqual(b, b3)
+    b2.add("a") // "a"
+    XCTAssertNotEqual(b, b2)
 
-    b3.add("a") // "aa"
-    XCTAssertNotEqual(b, b3)
+    b2.add("a") // "aa"
+    XCTAssertNotEqual(b, b2)
 
-    b3.add("a") // "aaa"
-    XCTAssertEqual(b, b3)
+    b2.add("a") // "aaa"
+    XCTAssertEqual(b, b2)
 
-    b3.add("a") // "aaaa"
-    XCTAssertNotEqual(b, b3)
+    b2.add("a") // "aaaa"
+    XCTAssertNotEqual(b, b2)
 
-    b3 = Bag<Character>("aaab")
-    XCTAssertNotEqual(b, b3)
+    b2 = Bag<Character>("bbb")
+    XCTAssertNotEqual(b, b2)
   }
 
   func testIsSubBag() {
@@ -89,6 +89,10 @@ class BagTest: XCTestCase {
     XCTAssertTrue(b.isSubBag(of: b))
     XCTAssertTrue(b2.isSubBag(of: b))
     XCTAssertFalse(b.isSubBag(of: b2))
+
+    // Test where subbag contains keys not present in superbag
+    let b3 = Bag<Character>("ac")
+    XCTAssertFalse(b3.isSubBag(of: b))
   }
 
 }
