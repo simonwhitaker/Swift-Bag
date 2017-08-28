@@ -7,6 +7,6 @@ var b = Bag<Character>();
 for c in "hello".characters {
   b.add(c)
 }
-let uniques = b.count // uniques is 4
+let count = b.count // count is 5
 let lcount = b.count(for: "l") // lcount is 2
 ```

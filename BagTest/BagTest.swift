@@ -24,9 +24,9 @@ class BagTest: XCTestCase {
   }
 
   func testCountWithDuplicates() {
-    let b = Bag<Character>("aaa")
-    XCTAssertEqual(b.count, 1)
-    XCTAssertEqual(b.count(for: "a"), 3)
+    let b = Bag<Character>("aab")
+    XCTAssertEqual(b.count, 3)
+    XCTAssertEqual(b.count(for: "a"), 2)
   }
 
   func testEquality() {

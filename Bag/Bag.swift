@@ -10,6 +10,7 @@ import Foundation
 
 struct Bag<T: Hashable> {
   fileprivate var storage: Dictionary<T, Int>
+  private var _count: Int = 0
 
   init() {
     storage = Dictionary<T, Int>()
@@ -21,6 +22,7 @@ struct Bag<T: Hashable> {
     } else {
       self.storage[elem] = 1
     }
+    _count += 1
   }
 
   func isSubBag (of superbag: Bag<T>) -> Bool {
@@ -38,7 +40,7 @@ struct Bag<T: Hashable> {
 
   var count: Int {
     get {
-      return self.storage.count
+      return _count
     }
   }
 
