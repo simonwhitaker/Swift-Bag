@@ -25,6 +25,17 @@ struct Bag<T: Hashable> {
     _count += 1
   }
 
+  mutating func remove (_ elem: T) {
+    if let currentCount = self.storage[elem] {
+      if currentCount > 1 {
+        self.storage[elem] = currentCount - 1
+      } else {
+        self.storage.removeValue(forKey: elem)
+      }
+      _count -= 1
+    }
+  }
+
   func isSubBag (of superbag: Bag<T>) -> Bool {
     for (key, count) in self.storage {
       if let superbagcount = superbag.storage[key] {

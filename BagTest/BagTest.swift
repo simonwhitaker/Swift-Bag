@@ -18,9 +18,37 @@ extension Bag where T == Character {
 }
 
 class BagTest: XCTestCase {
+
   func testAddAndCount() {
     let b = Bag<Character>("abcd")
     XCTAssertEqual(b.count, 4)
+  }
+
+  func testRemove() {
+    var b = Bag<Character>("abbd")
+    XCTAssertEqual(b.count, 4)
+
+    b.remove("b")
+    XCTAssertEqual(b.count(for: "b"), 1);
+    XCTAssertEqual(b.count, 3)
+
+    b.remove("b")
+    XCTAssertEqual(b.count(for: "b"), 0);
+    XCTAssertEqual(b.count, 2)
+
+    b.remove("b")
+    XCTAssertEqual(b.count(for: "b"), 0);
+    XCTAssertEqual(b.count, 2)
+
+    b.add("b")
+    XCTAssertEqual(b.count(for: "b"), 1);
+    XCTAssertEqual(b.count, 3)
+
+    b.remove("a")
+    b.remove("b")
+    b.remove("b")
+    b.remove("d")
+    XCTAssertEqual(b.count, 0)
   }
 
   func testCountWithDuplicates() {
@@ -62,4 +90,5 @@ class BagTest: XCTestCase {
     XCTAssertTrue(b2.isSubBag(of: b))
     XCTAssertFalse(b.isSubBag(of: b2))
   }
+
 }
