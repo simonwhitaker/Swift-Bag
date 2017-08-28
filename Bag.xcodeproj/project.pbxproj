@@ -11,6 +11,7 @@
 		F4DD2B6C1F53F5B70032E18E /* BagTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD2B6B1F53F5B70032E18E /* BagTest.swift */; };
 		F4DD2B721F53F5C70032E18E /* Bag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD2B711F53F5C70032E18E /* Bag.swift */; };
 		F4DD2B731F53F9790032E18E /* Bag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4DD2B711F53F5C70032E18E /* Bag.swift */; };
+		F4FF2AAA1F543FE900F502A0 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = F4FF2AA91F543FE900F502A0 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +33,7 @@
 		F4DD2B6B1F53F5B70032E18E /* BagTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagTest.swift; sourceTree = "<group>"; };
 		F4DD2B6D1F53F5B70032E18E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4DD2B711F53F5C70032E18E /* Bag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bag.swift; sourceTree = "<group>"; };
+		F4FF2AA91F543FE900F502A0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 		F4DD2B521F53F59B0032E18E = {
 			isa = PBXGroup;
 			children = (
+				F4FF2AA91F543FE900F502A0 /* README.md */,
 				F4DD2B5D1F53F59B0032E18E /* Bag */,
 				F4DD2B6A1F53F5B70032E18E /* BagTest */,
 				F4DD2B5C1F53F59B0032E18E /* Products */,
@@ -180,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4FF2AAA1F543FE900F502A0 /* README.md in Sources */,
 				F4DD2B721F53F5C70032E18E /* Bag.swift in Sources */,
 				F4DD2B5F1F53F59B0032E18E /* main.swift in Sources */,
 			);
@@ -352,6 +356,7 @@
 				F4DD2B641F53F59B0032E18E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F4DD2B6E1F53F5B70032E18E /* Build configuration list for PBXNativeTarget "BagTest" */ = {
 			isa = XCConfigurationList;
@@ -360,6 +365,7 @@
 				F4DD2B701F53F5B70032E18E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
