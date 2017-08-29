@@ -38,11 +38,8 @@ struct Bag<T: Hashable> {
 
   func isSubBag (of superbag: Bag<T>) -> Bool {
     for (key, count) in self.storage {
-      if let superbagcount = superbag.storage[key] {
-        if count > superbagcount {
-          return false
-        }
-      } else {
+      let superbagcount = superbag.storage[key] ?? 0
+      if count > superbagcount {
         return false
       }
     }
@@ -56,10 +53,7 @@ struct Bag<T: Hashable> {
   }
 
   func count(for key: T) -> Int {
-    if let count = self.storage[key] {
-      return count
-    }
-    return 0
+    return self.storage[key] ?? 0
   }
 }
 
@@ -69,13 +63,8 @@ extension Bag: Equatable {
       return false
     }
     for (lkey, lcount) in lhs.storage {
-      if let rcount = rhs.storage[lkey] {
-        if lcount != rcount {
-          // key exists in both, but counts are different
-          return false
-        }
-      } else {
-        // lkey doesn't exist in rhs.storage
+      let rcount = rhs.storage[lkey] ?? 0
+      if lcount != rcount {
         return false
       }
     }
