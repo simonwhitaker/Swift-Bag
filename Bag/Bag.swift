@@ -76,3 +76,10 @@ extension Bag: Equatable {
     return true
   }
 }
+
+// MARK: - ExpressibleByArrayLiteral
+extension Bag: ExpressibleByArrayLiteral {
+  public init(arrayLiteral elements: T...) {
+    self.init(elements)
+  }
+}
