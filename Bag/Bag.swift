@@ -14,6 +14,12 @@ public struct Bag<T: Hashable> {
 
   public init() {}
 
+  public init<C: Collection>(_ collection: C) where C.Element == T {
+    for element in collection {
+      self.add(element)
+    }
+  }
+
   public mutating func add (_ elem: T) {
     storage[elem, default: 0] += 1
     count += 1
