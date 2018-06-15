@@ -11,7 +11,7 @@ import XCTest
 extension Bag where T == Character {
   init(_ s: String) {
     self.init()
-    for c in s.characters {
+    for c in s {
       self.add(c)
     }
   }
