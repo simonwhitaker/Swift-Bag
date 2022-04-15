@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import Bag
 
 extension Bag where T == Character {
   init(_ s: String) {
